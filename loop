@@ -1,0 +1,113 @@
+Loops in R
+Loops are used to execute a block of code repeatedly, based on a condition. R supports three main types of loops:
+1. for Loop
+The for loop repeats a block of code for a fixed number of times.
+Syntax:
+for (variable in sequence) {
+  # Code to execute
+}
+Example:
+for (i in 1:5) {
+  print(paste("This is iteration number", i))
+}
+Output:
+[1] "This is iteration number 1"
+[1] "This is iteration number 2"
+[1] "This is iteration number 3"
+[1] "This is iteration number 4"
+[1] "This is iteration number 5"
+________________________________________
+2. while Loop
+The while loop continues to execute a block of code as long as a specified condition is TRUE.
+Syntax:
+while (condition) {
+  # Code to execute
+}
+Example:
+counter <- 1
+while (counter <= 5) {
+  print(paste("Counter is", counter))
+  counter <- counter + 1
+}
+Output:
+[1] "Counter is 1"
+[1] "Counter is 2"
+[1] "Counter is 3"
+[1] "Counter is 4"
+[1] "Counter is 5"
+________________________________________
+3. repeat Loop
+The repeat loop executes indefinitely until you explicitly use a break statement to exit the loop.
+Syntax:
+repeat {
+  # Code to execute
+  if (condition) {
+    break
+  }
+}
+Example:
+counter <- 1
+repeat {
+  print(paste("Counter is", counter))
+  counter <- counter + 1
+  if (counter > 5) {
+    break
+  }
+}
+Output:
+[1] "Counter is 1"
+[1] "Counter is 2"
+[1] "Counter is 3"
+[1] "Counter is 4"
+[1] "Counter is 5"
+________________________________________
+Control Statements in Loops
+1.	break: Exits the loop immediately.
+2.	next: Skips the current iteration and moves to the next one.
+Examples:
+•	Using break:
+for (i in 1:10) {
+  if (i == 5) {
+    break
+  }
+  print(i)
+}
+Output:
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+•	Using next:
+for (i in 1:5) {
+  if (i == 3) {
+    next
+  }
+  print(i)
+}
+Output:
+[1] 1
+[1] 2
+[1] 4
+[1] 5
+________________________________________
+Nested Loops
+You can use loops inside loops to work with multidimensional data.
+Example:
+for (i in 1:3) {
+  for (j in 1:2) {
+    print(paste("i =", i, ", j =", j))
+  }
+}
+Output:
+[1] "i = 1 , j = 1"
+[1] "i = 1 , j = 2"
+[1] "i = 2 , j = 1"
+[1] "i = 2 , j = 2"
+[1] "i = 3 , j = 1"
+[1] "i = 3 , j = 2"
+________________________________________
+Key Notes
+•	Use for when the number of iterations is known.
+•	Use while when the end condition is dynamic.
+•	Avoid infinite loops with while and repeat unless intentional.
+
