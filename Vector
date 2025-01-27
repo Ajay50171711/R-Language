@@ -68,7 +68,7 @@ Find the total of the discounted prices.
 prices <- c(100, 200, 150, 300)
 
 # Apply 10% discount
-#discounted_prices <- prices * 0.9
+
 
 discount_percentages <-10
 
