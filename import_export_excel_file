@@ -1,0 +1,52 @@
+Reading Data in R
+
+1.	Using read.csv()
+o	Reads a CSV (Comma-Separated Values) file into a data frame.
+o	Example:
+data1 <- read.csv(file = "C:\\Users\\Admin\\Desktop\\python_file handling\\exporteddata1csvmethod.csv", header = T)
+o	header = T means the first row contains column names.
+o	You can also choose the file interactively:
+data1 <- read.csv(file.choose(), header = T)
+o	file.choose() opens a dialog box to select the file.
+
+2.	Using read.table()
+o	Reads a general tabular file (CSV, TXT, etc.).
+o	Example:
+data2 <- read.table(file.choose(), header = T, sep = "\t")
+o	sep = "\t" specifies tab-separated values.
+
+3.	Using read.delim()
+o	Reads tab-separated files (like .txt with tab spacing).
+o	Example:
+data2 <- read.delim(file.choose(), header = T)
+________________________________________
+Writing Data in R
+
+1.	Using write.table()
+o	Writes a data frame to a file.
+o	Example:
+write.table(data1, file = "exporteddata1.csv", sep = ",")
+o	This creates a CSV file with commas as separators.
+
+2.	Writing to a specific path
+o	Example:
+write.table(data1, file = "C:\\Users\\Admin\\Desktop\\python_file handling\\exporteddata1.csv", row.names = F, sep = ",")
+o	row.names = F prevents R from writing row numbers in the file.
+
+3.	Writing with different delimiters
+o	Space-separated:
+write.table(data1, file = "C:\\Users\\Admin\\Desktop\\python_file handling\\exporteddata1space", row.names = F, sep = " ")
+o	Tab-separated:
+write.table(data1, file = "C:\\Users\\Admin\\Desktop\\python_file handling\\exporteddata1.txt", row.names = F, sep = "\t")
+
+4.	Using write.csv()
+o	Writes a data frame to a CSV file without row numbers.
+o	Example:
+write.csv(data1, file = "C:\\Users\\Admin\\Desktop\\python_file handling\\exporteddata1csvmethod.csv", row.names = F)
+________________________________________
+Conclusion
+•	Use read.csv() and write.csv() for CSV files.
+•	Use read.table() or read.delim() for other formats.
+•	Specify sep = "\t" for tab-separated data or " " for space-separated data.
+•	Use file.choose() to select files interactively.
+
