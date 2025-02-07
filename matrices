@@ -92,7 +92,7 @@ diag(c(1, 2, 3))
 ```r
 # Column Binding
 cbind(m1, m2)
-
+ 
 # Row Binding
 rbind(m1, m2)
 ```
