@@ -1,0 +1,39 @@
+data1<-read.csv(file.choose(),header = T)
+
+data1  #to print the data
+
+dim(data1)  #to see the number of rows and columns
+
+head(data1)  #to see the first six value of the table
+
+tail(data1)   #to see the last six value of the table
+
+data1[c(3:5), ]   #from row 3 to 5 all columns
+
+data1[5:9,]      #from row 5 to 9 all columns
+
+data1[-(4:37),]   #except row 4 to 37
+
+names(data1)   #all the columns name
+
+rm(data1)  #remove the data
+
+data1
+
+mean(data1$Price)  #mean of the price
+
+attach(data1) #by using attach we can directly access the  column
+
+mean(Price)
+
+mean(Total)
+     
+max(Quantity)
+
+min(Quantity)
+
+detach(data1) #now we cant't directly access the any column
+
+levels(data1$Price)
+
+summary(data1)
