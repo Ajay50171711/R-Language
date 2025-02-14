@@ -16,3 +16,16 @@ data<-data[,-7]  #to delete a column
 
 data1 <- data1[complete.cases(data1), ]  #to delete a empty row
 
+
+install.packages("ggplot2")  #to install ggplot2
+
+
+
+#to represent data in bargraph
+
+library(ggplot2)
+ggplot(data1, aes(x = Gender, y = Result)) + 
+  geom_point(color = "blue") + 
+  labs(title = "Scatter Plot of Marks vs Result", x = "Marks", y = "Result")
+
+
