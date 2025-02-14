@@ -9,5 +9,10 @@ data1$Name[data1$Name == "Zoya"] <- "Neetu"     #update a name of Zoya
 r1<-data.frame(Name="Ravi",Roll.No="5",Marks=98,bonus="105")  #add new row in data1
 data1<-rbind(data1,r1)
 
-data1 <- data1[complete.cases(data1), ]
+
+data<-data[-41,]  #to delete a row
+
+data<-data[,-7]  #to delete a column
+
+data1 <- data1[complete.cases(data1), ]  #to delete a empty row
 
