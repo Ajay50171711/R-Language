@@ -29,3 +29,5 @@ ggplot(data1, aes(x = Gender, y = Result)) +
   labs(title = "Scatter Plot of Marks vs Result", x = "Marks", y = "Result")
 
 
+
+
