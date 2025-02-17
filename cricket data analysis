@@ -1,0 +1,26 @@
+cricket_data<-data.frame(
+  over<-1:20,
+  india_runs = c(8, 7, 12, 6, 15, 9, 11, 14, 8, 10, 
+                 13, 9, 7, 12, 15, 18, 11, 16, 14, 20),
+  pakistan_runs = c(6, 8, 10, 7, 12, 8, 13, 9, 11, 8,
+                    14, 10, 9, 11, 13, 15, 12, 9, 16, 18)
+)
+  cricket_data
+
+
+# Let's visualize this using ggplot2
+library(ggplot2)
+
+# Create a plot comparing runs per over for both teams
+ggplot(cricket_data, aes(x = over)) +
+
+  geom_line(aes(y = india_runs, color = "India"), size = 1) +
+  geom_line(aes(y = pakistan_runs, color = "Pakistan"), size = 1) +
+  geom_point(aes(y = india_runs, color = "India"), size = 3) +
+  geom_point(aes(y = pakistan_runs, color = "Pakistan"), size = 3) +
+  labs(title = "Cricket Match: Runs per Over",
+       x = "Over",
+       y = "Runs",
+       )+
+ scale_color_manual(values = c("India" = "blue", "Pakistan" = "green"))
+
