@@ -24,3 +24,19 @@ ggplot(cricket_data, aes(x = over)) +
        )+
  scale_color_manual(values = c("India" = "blue", "Pakistan" = "green"))
 
+
+# Calculate total scores
+india_total <- sum(cricket_data$india_runs)
+pakistan_total <- sum(cricket_data$pakistan_runs)
+
+# Print totals
+cat("Total Scores:\n")
+cat("India:", india_total, "runs\n")
+cat("Pakistan:", pakistan_total, "runs\n")
+
+
+
+
+
+
+
