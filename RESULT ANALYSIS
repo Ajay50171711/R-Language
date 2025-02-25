@@ -1,0 +1,40 @@
+library(ggplot2)
+
+# Creating a dataframe with 20 students
+set.seed(123)  # Setting seed for reproducibility
+
+data1 <- data.frame(
+  name = paste("Student", 1:20),  # Generating names
+  gender = sample(c("Male", "Female"), 20, replace = TRUE),  # Random Male/Female
+  marks = sample(40:100, 20, replace = TRUE)  # Random marks between 40 and 100
+)
+
+# Assigning Pass/Fail based on marks (Pass if marks >= 50)
+data1$result <- ifelse(data1$marks >= 50, "Pass", "Fail")
+
+# Viewing the first few rows of the dataset
+print(data1)
+
+# Summarizing the number of Pass and Fail students by gender
+summary_table <- table(data1$gender, data1$result)
+print(summary_table)
+
+# Extracting individual counts
+pass_male <- summary_table["Male", "Pass"]
+fail_male <- summary_table["Male", "Fail"]
+pass_female <- summary_table["Female", "Pass"]
+fail_female <- summary_table["Female", "Fail"]
+
+# Displaying the counts
+cat("\nSummary:\n")
+cat("Pass Male: ", pass_male, "\n")
+cat("Fail Male: ", fail_male, "\n")
+cat("Pass Female: ", pass_female, "\n")
+cat("Fail Female: ", fail_female, "\n")
+
+# Creating a bar graph for Pass and Fail counts by Gender
+ggplot(data1, aes(x = gender, fill = result)) + 
+  geom_bar(position = "dodge") +  # Dodge places Pass and Fail bars side by side
+  labs(title = "Pass and Fail Count by Gender", x = "Gender", y = "Count") +
+  theme_minimal()
+data1
