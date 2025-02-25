@@ -1,0 +1,18 @@
+A store offers discounts based on the total purchase amount and membership type:
+
+Regular Customers:
+
+If the purchase is above $500, they get a 10% discount.
+If the purchase is between $200 and $500, they get a 5% discount.
+Otherwise, no discount.
+Premium Members:
+
+If the purchase is above $500, they get a 20% discount.
+If the purchase is between $200 and $500, they get a 10% discount.
+Otherwise, they get a 5% discount.
+Your Task:
+Ask the user to enter their purchase amount.
+Ask if they are a Premium Member (yes or no).
+Calculate and display the final price after applying the discount.
+
+solution--------------------------------------
