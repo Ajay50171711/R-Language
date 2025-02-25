@@ -73,6 +73,21 @@ result <- switch(day,
 print(result)
 Output:
 [1] "Wednesday"
+============================================
+
+a<-as.numeric(readline(prompt = "enter a number"))
+
+b<-as.numeric(readline(prompt = "enter a number"))
+
+
+c<-readline(prompt = "enter the operation sum,sub,mul,div")
+
+result<-switch(c,
+               "sum"=a+b,
+               "sub"=a-b,
+               "mul"=a*b,
+               "div"=a/b)
+result
 ________________________________________
 5. Vectorized Decision Making with ifelse
 The ifelse function is a vectorized way to apply conditions to vectors.
