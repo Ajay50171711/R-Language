@@ -55,31 +55,6 @@ print(total_prices)
 # Calculate the grand total
 grand_total <- sum(total_prices)
 print(grand_total)
-  ------------------------------------------------------------
-
-Perform Mathematical Operations
-Question:
-Create a vector prices with values 100, 200, 150, 300.
-
-Apply a 10% discount to all prices.
-Find the total of the discounted prices.
-
-  # Solution
-prices <- c(100, 200, 150, 300)
-
-# Apply 10% discount
-
-
-discount_percentages <-10
-
-# Apply formula element-wise
-discounted_prices <- prices * (1 - discount_percentages / 100)
-
-# Find total of discounted prices
-total_discounted <- sum(discounted_prices)
-
-print(discounted_prices)
-print(total_discounted)
 
   ----------------------------------------------------------------------
 
@@ -154,3 +129,29 @@ avg_marks <- mean(marks)
 print(min_marks)
 print(max_marks)
 print(avg_marks)
+-------------------------------------question-------------------------------------------
+  ------------------------------------------------------------
+
+Perform Mathematical Operations
+Question:
+Create a vector prices with values 100, 200, 150, 300.
+
+Apply a 10% discount to all prices.
+Find the total of the discounted prices.
+
+  # Solution
+prices <- c(100, 200, 150, 300)
+
+# Apply 10% discount
+
+
+discount_percentages <-10
+
+# Apply formula element-wise
+discounted_prices <- prices * (1 - discount_percentages / 100)
+
+# Find total of discounted prices
+total_discounted <- sum(discounted_prices)
+
+print(discounted_prices)
+print(total_discounted)
