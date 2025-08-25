@@ -17,6 +17,9 @@ data<-data[,-7]  #to delete a column
 data1 <- data1[complete.cases(data1), ]  #to delete a empty row
 
 
+write.csv(data1, file = "C:\\Users\\Admin\\Desktop\\python_file handling\\exporteddata1csvmethod.csv", row.names = F)
+
+
 install.packages("ggplot2")  #to install ggplot2
 
 
