@@ -1,1 +1,47 @@
+install.packages("ggplot2")  //if you already run previously then no need
+library(ggplot2)
+
+head(mpg) //show first 6 row of dataset
+
+str(mpg)   //show structure of dataset number of row and columns and their datatype
+
+
+
+scatter plot (engine size vs highway mileage)
+👉 question: does bigger engine → lower fuel efficiency?
+
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point()
+
+
+🔎 interpretation:
+x-axis = engine size (litres)
+y-axis = highway mpg
+points show each car model
+you’ll notice downward trend: bigger engines give lower mpg.
+====================================================================
+scatter with color by class
+👉 compare different vehicle classes:
+
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point()
+
+🔎 now each point is colored by class (SUV, compact, etc.), making differences clear
+======================================================================================
+add a trend line
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE)    
+//lm = linear model without it line are curve 
+//se=standard error which cause grey line in each linear line
+=============================================================================================================
+bar plot (count cars per class)
+ggplot(mpg, aes(x = class)) +  //here we not mention y axis show it is consider as count of row by default
+  geom_bar(fill = "skyblue")
+
+🔎 shows how many cars are in each class.
+
+===================================================================
+
+
 
