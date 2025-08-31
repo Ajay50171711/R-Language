@@ -42,6 +42,21 @@ ggplot(mpg, aes(x = class)) +  //here we not mention y axis show it is consider 
 🔎 shows how many cars are in each class.
 
 ===================================================================
+ggplot(mpg, aes(x = class, y = hwy, fill = class)) +
+  geom_boxplot() +
+  theme(legend.position = "none")   
 
+//theme is use to customized non datapart
+//🔹 legend.position
+This controls where the legend appears on the plot.
+Options:
+"right" (default)
+"left"
+"top"
+"bottom"
+"none" → removes the legend entirely.
+
+shows geom_boxplot()
+==============================================================================
 
 
