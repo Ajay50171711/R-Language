@@ -1,5 +1,14 @@
 data1<-read.csv(file.choose(), header = T)   #to open file / import
 
+# Sample data frame creation
+data1 <- data.frame(
+  Name = c("Simran", "Zoya", "Aman", "Raj", "Priya"),
+  Roll.No = c(1, 2, 3, 4, 5),
+  Marks = c(85, 90, 78, 88, 92),
+  Gender = c(NA, "Female", "Male", "Male", "Female"),
+  Result = c("Pass", "Pass", "Pass", "Pass", "Pass")
+)
+
 data1$Bonusmarks <- data1$Marks * 0.1  # 10% bonusmarks calculation in another column
 
 data1$Gender[data1$Name == "Simran"] <- "Female"   #to change the gender of simran
