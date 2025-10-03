@@ -195,3 +195,33 @@ Output:
 
 a b c 
 5 2 1 
+
+
+====================================================================================================
+
+🔶 Assignment Question (R Language – Lists):
+
+Q:
+Create a list named employee_data in R to store the following information about an employee:
+
+Personal Details: name = "Ayesha", age = 34, gender = "Female"
+
+Job Details: department = "HR", designation = "Manager", salary = 75000
+
+Performance Scores (out of 100): communication = 85, leadership = 90, punctuality = 88
+
+After creating the list:
+
+Print the entire employee_data list.
+
+Access and print the employee's designation.
+
+Update the salary to 80000.
+
+Add a new sub-list named contact_info with the following:
+
+phone = "9876543210"
+
+email = "ayesha.hr@company.com"
+
+Calculate and print the average performance score.
