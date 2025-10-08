@@ -106,6 +106,31 @@ apply(m1, 1, sum)
 apply(m1, 2, sum)
 ```
 
+
+🧪 Practical Question: Matrix Operations in R
+
+Task:
+
+You are working with data involving test scores of students across three subjects. Each row in a matrix represents a student, and each column represents a subject: Math, Science, and English.
+
+Step-by-step Instructions:
+
+Create a 3x3 matrix named scores with the following data filled by row:
+
+Math	Science	English
+85	90	88
+78	85	84
+92	88	91
+
+Perform the following tasks:
+
+a. Print the matrix.
+b. Extract the scores of the second student.
+c. Extract all Science scores (i.e., the second column).
+d. Calculate the total score for each student using apply().
+e. Calculate the average score for each subject.
+
+
 ## Conclusion
 Matrices in R provide a powerful way to store and manipulate structured numerical data efficiently. Understanding matrix operations is crucial for data analysis, linear algebra, and statistical computations.
 
