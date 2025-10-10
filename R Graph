@@ -1,0 +1,25 @@
+📊 R Basic Graphs – Cheat Sheet
+
+This guide covers basic plotting functions in R using base R only (no ggplot2 or external libraries).
+
+🧩 1. Basic Plot Syntax
+plot(x, y,
+     main = "Main Title",
+     xlab = "X-axis Label",
+     ylab = "Y-axis Label",
+     col = "color",
+     pch = symbol,
+     type = "plot_type",
+     lwd = line_width,
+     lty = line_type)
+
+🔹 Common Parameters:
+Parameter	Description
+x, y	Numeric vectors for x and y axes
+main	Plot title
+xlab, ylab	Labels for X and Y axes
+col	Color of points/lines
+pch	Point shape (0–25), e.g. 16 = filled circle
+type	Type of plot: "p" = points, "l" = lines, "b" = both, "o" = overplotted, "h" = histogram lines
+lwd	Line width
+lty	Line type: 1 = solid, 2 = dashed, 3 = dotted, etc.
