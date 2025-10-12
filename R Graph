@@ -23,3 +23,97 @@ pch	Point shape (0–25), e.g. 16 = filled circle
 type	Type of plot: "p" = points, "l" = lines, "b" = both, "o" = overplotted, "h" = histogram lines
 lwd	Line width
 lty	Line type: 1 = solid, 2 = dashed, 3 = dotted, etc.
+
+
+-----------------------------------------------------------
+barplot(height,
+        names.arg = NULL,
+        main = NULL,
+        xlab = NULL,
+        ylab = NULL,
+        col = NULL,
+        border = NULL,
+        horiz = FALSE,
+        beside = FALSE,
+        ylim = NULL,
+        las = 1,
+        width = 1,
+        space = NULL,
+        cex.names = 1,
+        cex.axis = 1,
+        legend.text = NULL)
+
+| Parameter       | Meaning                                                                                     | Example / Notes                        |
+| --------------- | ------------------------------------------------------------------------------------------- | -------------------------------------- |
+| **height**      | Numeric vector (or matrix) giving the bar heights.                                          | `barplot(c(10, 20, 15))`               |
+| **names.arg**   | Labels shown under each bar.                                                                | `names.arg = c("A", "B", "C")`         |
+| **main**        | Main title of the plot.                                                                     | `main = "Sales by Product"`            |
+| **xlab**        | Label for the x-axis.                                                                       | `xlab = "Products"`                    |
+| **ylab**        | Label for the y-axis.                                                                       | `ylab = "Revenue ($)"`                 |
+| **col**         | Colors for the bars. Can be one color or a vector.                                          | `col = c("skyblue", "orange", "pink")` |
+| **border**      | Border color for bars.                                                                      | `border = "black"`                     |
+| **horiz**       | Logical: `TRUE` makes bars horizontal.                                                      | `horiz = TRUE`                         |
+| **beside**      | For grouped barplots (when `height` is a matrix). `TRUE` = side-by-side, `FALSE` = stacked. | `beside = TRUE`                        |
+| **ylim**        | Range of y-axis values.                                                                     | `ylim = c(0, 50)`                      |
+| **las**         | Axis label orientation: <br> `0`=parallel, `1`=horizontal, `2`=perpendicular, `3`=vertical. | `las = 2` makes labels vertical.       |
+| **width**       | Relative width of bars.                                                                     | `width = c(1, 0.5, 1.5)`               |
+| **space**       | Space between bars.                                                                         | `space = 0.5` (default = 0.2)          |
+| **cex.names**   | Size of bar labels.                                                                         | `cex.names = 0.8`                      |
+| **cex.axis**    | Size of axis tick labels.                                                                   | `cex.axis = 0.9`                       |
+| **legend.text** | Adds a legend (especially useful for grouped bars).                                         | `legend.text = c("2024", "2025")`      |
+
+
+values <- c(12, 20, 8, 15)
+barplot(values,
+        names.arg = c("Q1", "Q2", "Q3", "Q4"),
+        main = "Quarterly Sales",
+        xlab = "Quarter",
+        ylab = "Sales (in $K)",
+        col = c("skyblue", "orange", "green", "violet"),
+        border = "black",
+        las = 1,
+        ylim = c(0, 25))
+
+
+-----------------------------------------------------------------------------------------------
+pie(x,
+    labels = names(x),
+    main = NULL,
+    col = NULL,
+    clockwise = FALSE,
+    radius = 1,
+    init.angle = 0,
+    border = NULL,
+    density = NULL,
+    angle = 45,
+    cex = 1,
+    lty = 1)
+
+| Parameter      | Meaning                                                                 | Example / Notes                      |
+| -------------- | ----------------------------------------------------------------------- | ------------------------------------ |
+| **x**          | Numeric vector — values for each slice (usually percentages or counts). | `x = c(30, 20, 25, 25)`              |
+| **labels**     | Text labels for each slice.                                             | `labels = c("A", "B", "C", "D")`     |
+| **main**       | Main title for the chart.                                               | `main = "Market Share 2025"`         |
+| **col**        | Colors for the slices.                                                  | `col = rainbow(4)`                   |
+| **clockwise**  | Logical: `TRUE` draws slices clockwise.                                 | `clockwise = TRUE`                   |
+| **radius**     | Size of the pie (0–1).                                                  | `radius = 0.8` (smaller pie)         |
+| **init.angle** | Starting angle (in degrees).                                            | `init.angle = 90` starts at the top. |
+| **border**     | Color of slice borders.                                                 | `border = "white"`                   |
+| **density**    | Adds shading lines inside slices (number = line density).               | `density = c(10, 20, 30)`            |
+| **angle**      | Angle of shading lines (used with `density`).                           | `angle = 45`                         |
+| **cex**        | Text size for labels.                                                   | `cex = 0.9`                          |
+| **lty**        | Line type for slice borders.                                            | `lty = 2` (dashed lines)             |
+
+
+share <- c(40, 25, 20, 15)
+labels <- c("Product A", "Product B", "Product C", "Product D")
+
+pie(share,
+    labels = labels,
+    main = "Market Share by Product",
+    col = c("red","orange","blue","green"),
+    border = "white",
+    clockwise = TRUE,
+    init.angle = 90,
+    cex = 0.9)
+
