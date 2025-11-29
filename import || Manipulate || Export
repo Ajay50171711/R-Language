@@ -2,7 +2,7 @@ data1<-read.csv(file.choose(), header = T)   #to open file / import
 
 # Sample data frame creation
 data1 <- data.frame(
-  Name = c("Simran", "Zoya", "Aman", "Raj", "Priya"),
+  Name = c("Sanjay", "Zoya", "Aman", "Raj", "Priya"),
   Roll.No = c(1, 2, 3, 4, 5),
   Marks = c(85, 90, 78, 88, 92),
   Gender = c(NA, "Female", "Male", "Male", "Female"),
