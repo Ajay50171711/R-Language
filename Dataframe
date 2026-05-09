@@ -126,6 +126,53 @@ Output:
 
 
 
+students <- data.frame(
+  id = c(1,2,3),
+  name = c("Amit", "Rahul", "Sneha"),
+  marks = c(85, 90, 88),
+  passed = c(TRUE, TRUE, TRUE)
+)
+
+students
+==========================================
+adding column
+----------------
+students$grade <- c("A", "A+", "A")
+
+adding row
+-------------
+new_row <- data.frame(
+  id = 4,
+  name = "Priya",
+  marks = 92,
+  passed = TRUE,
+  grade = "A+"
+)
+
+students <- rbind(students, new_row)
+
+Removing Columns
+--------------------
+students$grade <- NULL
+
+Removing Rows
+-------------------------
+students <- students[-2, ]
+
+
+Sorting Data
+---------------
+students[order(students$marks), ]
+
+Descending:
+---------------------
+students[order(-students$marks), ]
+
+Renaming Columns
+---------------------
+colnames(students) <- c("ID", "NAME", "MARKS", "PASSED")
+
+
 🧠 Question: DataFrame Practice Task
 
 Using the following DataFrame:
@@ -143,3 +190,7 @@ Add a new column named Result that shows "Pass" if Score >= 90, otherwise "Fail"
 Display only the names and scores of students who passed.
 Calculate the average score of all students who passed.
 Sort the resulting DataFrame in descending order of Score.
+
+
+
+
