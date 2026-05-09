@@ -188,7 +188,6 @@ Task:
 
 Add a new column named Result that shows "Pass" if Score >= 90, otherwise "Fail".
 Display only the names and scores of students who passed.
-Calculate the average score of all students who passed.
 Sort the resulting DataFrame in descending order of Score.
 
 
